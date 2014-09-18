@@ -6,7 +6,7 @@
 - **BOM**: Browser Object Model.
 
 
-<script>
+< script >
 ---------
 
 - Attributes
@@ -40,15 +40,18 @@
 JavaScript inside HTML
 ----------------------
 
-a. Ponerlo dentro de la página HTML dentro de las etiquetas <script>
+- Ponerlo dentro de la página HTML dentro de las etiquetas < script >
 	- EL código se interpreta de arriba hacia abajo.
 	- El resto de la página no se carga o despliega hasta que se termine de ejecutar el código JS.
-b. Incluirlo desde un archivo externo.
+
+- Incluirlo desde un archivo externo.
 	- Es más fácil hacer modificaciones.
 	- Para hacer esto se usa el atributo src que debe tener una URL del archivo que contiene el código JS.
-		'''
-			<script type="text/javascript" src="example.js"></script>
-		'''
+	```
+	
+	<script type="text/javascript" src="example.js"></script>
+	
+	```
 	- El archivo externo sólo contendrá código JS.
 	- Cuando se usa un archivo externo no debe ponerse nada entre las etiquetas de script porque será ignorado.
 	- Pueden usarse archivos de internet (con cuidado).
