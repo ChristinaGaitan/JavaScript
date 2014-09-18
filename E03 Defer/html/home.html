@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pagina simple</title>
+		<!-- Cuando no se utiliza el defer los scripts corren en el orden indicado -->
+		<!--
+			<script type="text/javascript" src="../js/defer01.js"></script>
+			<script type="text/javascript" src="../js/defer02.js"></script>
+			<script type="text/javascript" src="../js/normal.js"></script>
+		-->
+		<!-- En este caso primero se 
+				1. Ejecuta normal
+				2. Aparece el contenido de la página
+				3. Ejecuta defer01
+				4. Ejecuta defer02
+			 Esto es porque los dos archivos defer tienen indicado que deben esperar a ejecutarse
+			 hasta que la página termine de parsearse. -->
+			<script type="text/javascript" src="../js/defer01.js" defer="defer"></script>
+			<script type="text/javascript" src="../js/defer02.js" defer="defer"></script>
+			<script type="text/javascript" src="../js/normal.js"></script>
+	</head>
+	<body>
+		<h1>Hola from JavaScript</h1>
+	</body>
+</html>
