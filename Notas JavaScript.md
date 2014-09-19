@@ -132,8 +132,8 @@ External vs Inline Scripts
 
 JS Syntax
 ---------
-1. Case-sensitivity
-2. Identifiers
+- Case-sensitivity
+- Identifiers
 	- Primer caracter debe ser una letra, un guion bajo o el signo de dolar ($)
 	- Los demás caracteres pueden ser letras, guion bajo, signo de dola o números.
 	- Se recomienda que la primera palabra sea en minusculas y las demás empiecen con mayúscula (camel case)
@@ -141,14 +141,15 @@ JS Syntax
 		- myFirst
 		- yourSecond
 		- hisThirdCar
-3. Comments
+- Comments
 ```
 	// Comentario de línea
 	/* 
 		Comentario de bloque
 	*/ 
 ```
-4. Statements
+
+- Statements
 	- Deben terminar en punto y coma (;)
 	- Omitir el punto y coma puede ser válido pero NO recomendado pues le pone trabajo extra al parser, ya que el debe de "adivinar" en dónde debería ir el final de la sentencia.
 	- Los bloques van dentro de corchetes { }
