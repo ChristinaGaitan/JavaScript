@@ -167,32 +167,40 @@ Variables
 ---------
 - Inicialización
 	- Cuando se quiere declarar una variable sin asignarle ningún valor se debe inicialiar = null.
+
 		```
 			//En este caso el valor null se comporta como un 0.
 			var number1 = null;
 			var number2 = number1*5; //number2 = 0
 		```
+
 	- Si no se le asigna ningún valor se declarará como undefined.
+
 		```
 			var number1;
 			var number2 = number1*5; //number2 = NaN
 		```
+
 	- Si se comparan null y undefined los valores son iguales.
 	- NO se puede usar una variable que NO ha sido declarada.
 
 - Las variables en JS puede contener cualquier tipo de dato.
+
 	```
 		//Esta inicialización NO convierte la variable a un tipo string,
 		// sólo le asigna un valor de tipo string
 		var mensaje = "hola";
 	```
+
 - Es posible cambiar el valor almacenado en una variable pero TAMBIÉN EL TIPO DE DATO.
+
 	```
 		//La variable prueba primero contiene un strig y después
 		//su valor se sobrescribe con un número
 		var prueba = "hola";
 		prueba = 100; //Es una asignación válida, pero NO RECOMENDADA
 	```
+
 - Alcance
 	- Es la parte del programa dónde una variable puede ser accedida.
 	- Se recomienda maneter el alcance las variables mínimo
@@ -202,3 +210,64 @@ Variables
 	- Variables locales
 		- Cuando se define una variable (var) dentro de una función o bloque, ésta es destruida en cuanto la función termina.
 - Se pueden definir varias variables en una sóla sentencia separándolas con comas (,). Esto aplica aún cuando las variables sean de diferente tipo.
+
+Data Types
+----------
+- Existen 5 tipos simples en JS
+	- Undefined
+	- Null
+	- Boolean
+	- Number
+	- String
+- 1 tipo complejo de dato
+	- Object: Una colección de otros tipos simples
+
+
+Typeof Operator
+---------------
+- Provee información sobre el tipo de dato de una variable o valor.
+- Este operador puede regresar alguno de los siguientes valores
+	- "undefined": valor indfinido
+	- "boolean": valor boleano
+	- "number": valor numérico
+	- "object": si el valor es un Objeto (no función) o Null
+	- "function": si el valor es una función
+- Al usar **typeof null** lo que se obtiene es "object" debido a que null es considerado un valor vacío para objetos.
+
+Undefined Type
+--------------
+- Este tipo sólo tiene un valor, ese valor es "undefined"
+- Este valor es asignado cuando se declara una variable utilizando la palabra reservada "var" pero no se le asigna algún valor a la nueva variable.
+
+	```
+	var test;
+	alert(test==undefined); //true
+	```
+
+- Aunque por default las variables NO inicializadas = undefined, NUNCA se debe asignar directamente ese valor, ya que el propósito de undefined es diferenciar entre un valor vacío y una variable NO inicializada.
+- Con una variable undefined sólo funciona el operador typeof.
+- El operador typeof también regresará undefined cuando se use con una variable NO declarada.
+
+	```
+	var message;
+	//var age is undeclared
+	alert(typeof message); //"undefined"
+	alert(typeof age); //"undefined"
+	```
+
+- Se recomienda SIEMPRE asignar valores cuando se declaran variables, de esta manera, si obtenemos un undefined sabremos que es porque se trata de una variable NO declarada.
+
+
+Null Type
+---------
+- Este tipo sólo tiene un valor, ese valor es "null"
+- Lógicamente, un valor null es el apuntador a un objeto vacío, es por eso que "typeof null" regresa "object";
+	```
+	var person = null;
+	alert(typeof person); //"object"
+	```
+- Se puede usar este tipo de dato cuando estamos declarando una variable que más adelante contendrá un objeto, es preferible inicializarla como null a no inicializarla.
+- Si inicializamos los objetos = null, entonces después podemos checar si el objeto ya fue llenado verificando si su valor es diferente de null.
+- El valor undefined es un derivado de null.
+
+**Nunca inicializar variables = undefined. Inicializar variables = null si esa variable contendrá un objeto**

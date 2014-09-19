@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pagina simple</title>
+			<script type="text/javascript">
+				//test = "hi"; //Variable GLOBAL
+				
+
+				/*
+				//En este caso el alert arroja undefined
+				var number1;
+				alert(number1);
+				*/
+
+				/*
+				//En este caso arroja NaN (Not A Number)
+				var number1;
+				var number2 = number1*100;
+				alert(number2);
+				*/
+
+				/*
+				//En este caso arroja 0, ya que null es tratado como un 0.
+				var number1=null;
+				var number2 = number1*100;
+				alert(number2);
+				*/
+
+				/*
+				//En este caso, la comparación de los 2 números arroja true,
+				// ya que null es lógicamente igual a undefined
+				var number1=null;
+				var number2;
+				//comparación
+				alert(number1==number2);
+				*/
+
+				/*
+				//En JS es legal cambiar el tipo de dato, pero NO es recomendable
+				//En este caso arroja el último valor de la variable = "hi"
+				var number1=100;
+				number1 = "hi";
+				alert(number1);
+				*/
+
+				
+				var number1 = 10;
+				function sayHi()
+				{
+					//Variable local de la función
+					var number2=1;
+				}
+				alert(number1); //Esta variable sí es conocida aquí
+				alert(number2); //Esta variable es desconocida aquí
+				
+			</script>
+	</head>
+	<body>
+		<h1>Hola from JavaScript</h1>
+		<noscript>
+			<!-- Cuando el JS NO está activado en el navegador => se muestra el siguiente parrafo -->
+			<p>El script no funciona en tu navegador</p>
+		</noscript>
+	</body>
+</html>
