@@ -148,7 +148,6 @@ JS Syntax
 		Comentario de bloque
 	*/ 
 ```
-
 - Statements
 	- Deben terminar en punto y coma (;)
 	- Omitir el punto y coma puede ser válido pero NO recomendado pues le pone trabajo extra al parser, ya que el debe de "adivinar" en dónde debería ir el final de la sentencia.
@@ -163,3 +162,43 @@ JS Syntax
 	- El navegador NO soporte scripting
 	- El navegador tenga el scripting desactivado.
 - Si no se cumple alguna de las condiciones anteriores => no se rederiza el contenido del < noscript >
+
+Variables
+---------
+- Inicialización
+	- Cuando se quiere declarar una variable sin asignarle ningún valor se debe inicialiar = null.
+		```
+			//En este caso el valor null se comporta como un 0.
+			var number1 = null;
+			var number2 = number1*5; //number2 = 0
+		```
+	- Si no se le asigna ningún valor se declarará como undefined.
+		```
+			var number1;
+			var number2 = number1*5; //number2 = NaN
+		```
+	- Si se comparan null y undefined los valores son iguales.
+	- NO se puede usar una variable que NO ha sido declarada.
+
+- Las variables en JS puede contener cualquier tipo de dato.
+	```
+		//Esta inicialización NO convierte la variable a un tipo string,
+		// sólo le asigna un valor de tipo string
+		var mensaje = "hola";
+	```
+- Es posible cambiar el valor almacenado en una variable pero TAMBIÉN EL TIPO DE DATO.
+	```
+		//La variable prueba primero contiene un strig y después
+		//su valor se sobrescribe con un número
+		var prueba = "hola";
+		prueba = 100; //Es una asignación válida, pero NO RECOMENDADA
+	```
+- Alcance
+	- Es la parte del programa dónde una variable puede ser accedida.
+	- Se recomienda maneter el alcance las variables mínimo
+	- Variables Globales
+		- Declarada afuera de cualquier función o bloque.
+		- Esta disponible para cualuier código en el documento donde fue declarada.
+	- Variables locales
+		- Cuando se define una variable (var) dentro de una función o bloque, ésta es destruida en cuanto la función termina.
+- Se pueden definir varias variables en una sóla sentencia separándolas con comas (,). Esto aplica aún cuando las variables sean de diferente tipo.
