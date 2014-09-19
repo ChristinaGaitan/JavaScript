@@ -102,3 +102,63 @@ Async
 	- Firefox 3.6+
 	- Safari 5+
 	- Chrome 7+
+
+**Tanto defer como async NO son soportados por todas las versiones de navegadores.**
+
+
+External vs Inline Scripts
+----------------------------
+- External
+	- Es lo recomendado.
+	- Mejor mantenibilidad.
+	- Tener el código JS separado del HTML permite que se pueda trabajar mejor en equipo.
+	- Si un archivo JS es usado por 2 o más páginas HTML, dicho archivo se descarga SÓLO una vez por lo que se reduce el tiempo de cargado de las páginas.
+	- Funciona tanto con HTML como con XHTML.
+- Inline
+	- Si se utilizan caracteres cómo el "<" en el código JS, (dentro del HTML) puede ocasionar problemas, pues el parser lo puede considerar como parte de una etiqueta HTML y no como código de JS ejecutable.
+		- SOLUCIONES	
+			1. Reemplazar el caracter con sú HTML entity (&lt;)
+			2. Envolver el código JS en una sección CDATA. Este tipo de secciones indican que el texto contenido dentro de ellas NO debe ser parseado como parte del documento, por lo que pueden usarse cualquier tipo de caracteres. El problema es que NO todos los navegadores lo entienden, para solucionar esto a veces es necesario comeentar esas etiquetas (//).
+			```
+				<![CDATA[
+					//Código JS
+				]]>
+
+				//<![CDATA[
+					//Código JS
+				//]]>
+
+			```
+
+JS Syntax
+---------
+1. Case-sensitivity
+2. Identifiers
+	- Primer caracter debe ser una letra, un guion bajo o el signo de dolar ($)
+	- Los demás caracteres pueden ser letras, guion bajo, signo de dola o números.
+	- Se recomienda que la primera palabra sea en minusculas y las demás empiecen con mayúscula (camel case)
+		- counter
+		- myFirst
+		- yourSecond
+		- hisThirdCar
+3. Comments
+```
+	// Comentario de línea
+	/* 
+		Comentario de bloque
+	*/ 
+```
+4. Statements
+	- Deben terminar en punto y coma (;)
+	- Omitir el punto y coma puede ser válido pero NO recomendado pues le pone trabajo extra al parser, ya que el debe de "adivinar" en dónde debería ir el final de la sentencia.
+	- Los bloques van dentro de corchetes { }
+
+< noscript >
+------------
+- Se creo omo una alternativa para los navegadores que NO soportaban JS.
+- Hoy en día se usa para cuando el usuario deshabilita JS en el navegador.
+- Esta etiqueta puede contener cualquier etiqueta HTML dentro MENOS la etiqueta < script >
+- El contenido de la etiqueta < noscript > se mostrará cuando:
+	- El navegador NO soporte scripting
+	- El navegador tenga el scripting desactivado.
+- Si no se cumple alguna de las condiciones anteriores => no se rederiza el contenido del < noscript >
