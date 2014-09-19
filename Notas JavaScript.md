@@ -85,3 +85,20 @@ Eventos: DOMContentLoaded vs onLoad
 ------------------------------------
 - **DOMContentLoaded**: Se dispara cuando se terminó de interpretar la página.
 - **onLoad**: Se dispara cuando todos los archivos se han terminado de descargar de todos los recursos, incluyendo imagenes.
+
+Async
+------
+- Fue introducido con HTML5
+- Es similar a defer porque cambia la manera en que se procesa el script.
+- Sólo aplica para archivos externos de scripting.
+- Le dice al navegador que empiece a descargar el archivo inmediatamente.
+- En XHTML se debe escribir async="async" en HTML sólo async.
+- El parseo de HTML continuará y el script será ejecutado tan pronto como esté listo.
+- NO se garantiza que los scripts se ejecuten en el orden en que está especificado; por lo tanto no debe haber dependencias entre los scripts.
+- El propósito de este atributo es indicar que la página NO necesita esperar a que el script se descargue y ejecute para continuar cargándose.
+- NO se recomienda que los scripts Async modifiquen el DOM cuando se están cargando.
+- Se garantiza la ejecución de estos scripts ANTES del evento onLoad y PODRIAN ejecutarse antes del evento DOMContentLoaded.
+- Es soportado por las versiones:
+	- Firefox 3.6+
+	- Safari 5+
+	- Chrome 7+

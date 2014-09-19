@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pagina simple</title>
+		<!-- Cuando NO se utiliza el defer los scripts corren en el orden indicado y la página html no se muestra hasta que terminan -->
+		<!--
+			<script type="text/javascript" src="../js/defer01.js"></script>
+			<script type="text/javascript" src="../js/defer02.js"></script>
+			<script type="text/javascript" src="../js/normal.js"></script>
+		-->
+		<!-- Cuando se usa asynd="async" , en este caso
+				- Pueden ejecutrase el async01 y el async02 en cualquier comento y orden.
+				- El script normal se ejecutará en cuanto sea detectado
+				- El HTML se carga simultaneamente
+		 -->
+			<script type="text/javascript" src="../js/async01.js" async="async"></script>
+			<script type="text/javascript" src="../js/async02.js" async="async"></script>
+			<script type="text/javascript" src="../js/normal.js" async="async"></script>
+	</head>
+	<body>
+		<h1>Hola from JavaScript</h1>
+	</body>
+</html>
