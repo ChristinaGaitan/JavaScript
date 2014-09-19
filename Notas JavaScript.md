@@ -248,6 +248,7 @@ Undefined Type
 - Con una variable undefined sólo funciona el operador typeof.
 - El operador typeof también regresará undefined cuando se use con una variable NO declarada.
 
+
 	```
 	var message;
 	//var age is undeclared
@@ -262,12 +263,14 @@ Null Type
 ---------
 - Este tipo sólo tiene un valor, ese valor es "null"
 - Lógicamente, un valor null es el apuntador a un objeto vacío, es por eso que "typeof null" regresa "object";
+
 	```
 	var person = null;
 	alert(typeof person); //"object"
 	```
+	
 - Se puede usar este tipo de dato cuando estamos declarando una variable que más adelante contendrá un objeto, es preferible inicializarla como null a no inicializarla.
 - Si inicializamos los objetos = null, entonces después podemos checar si el objeto ya fue llenado verificando si su valor es diferente de null.
 - El valor undefined es un derivado de null.
 
-**Nunca inicializar variables = undefined. Inicializar variables = null si esa variable contendrá un objeto**
+**Nunca inicializar variables = undefined. Inicializar variables = null si esa variable contendrá después un objeto**

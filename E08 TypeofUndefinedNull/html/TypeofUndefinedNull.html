@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pagina simple</title>
+			<script type="text/javascript">
+
+			/*
+			var my1=10;
+			var my2=false;
+			var my3="hey its me";
+			var my4;
+			var my5=null;
+
+			//Podemos usar typeof tanto con variables como con valores
+
+			//alert (typeof my1); //number
+			//alert (typeof my2); //boolean
+			//alert (typeof my3); //string
+			//alert (typeof my4); //undefined
+			//alert (typeof my5); //object
+			//alert (typeof -5); //number
+			//alert (typeof "-5"); //string
+				
+			*/
+
+			/*
+			//alert (my1); //hacer esto nos arroja el siguiente error: "Uncaught ReferenceError: my1 is not defined "
+
+			alert (typeof my1); //undefined. De esta manera podemos detectar que una variable NO ha sido declarada.
+			*/
+
+			/*
+			alert (null==undefined); //regresa true
+			*/
+
+			var myName = null;
+			//myName = "lcgt";	//Si se comenta esta línea entra al if.
+			if (myName==null)
+			{
+				alert("your name no significa nada"); //Si entra a este if podemos determinar que la variable no ha sido usada
+			}
+			</script>
+	</head>
+	<body>
+		<h1>Hola from JavaScript</h1>
+		<noscript>
+			<!-- Cuando el JS NO está activado en el navegador => se muestra el siguiente parrafo -->
+			<p>El script no funciona en tu navegador</p>
+		</noscript>
+	</body>
+</html>
