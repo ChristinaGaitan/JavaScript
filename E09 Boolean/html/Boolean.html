@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pagina simple</title>
+			<script type="text/javascript">
+				var myTest = false;//false
+				myTest=true; //true
+				myTest="hi"; //true
+				myTest=""; //false. Aplicando la función Boolean() podemos saber si una cadena está vacía.
+				myTest= 2; //true
+				myTest= -2; //true
+				myTest= 0; //false
+				myTest= NaN; //false
+				myTest= null; //false
+				myTest= undefined; //false
+				var booleanEquivalent = Boolean(myTest); 
+				alert (booleanEquivalent);
+			</script>
+	</head>
+	<body>
+		<h1>Hola from JavaScript</h1>
+		<noscript>
+			<!-- Cuando el JS NO está activado en el navegador => se muestra el siguiente parrafo -->
+			<p>El script no funciona en tu navegador</p>
+		</noscript>
+	</body>
+</html>

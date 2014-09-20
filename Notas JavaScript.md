@@ -274,3 +274,22 @@ Null Type
 - El valor undefined es un derivado de null.
 
 **Nunca inicializar variables = undefined. Inicializar variables = null si esa variable contendrá después un objeto**
+
+Boolean Type
+------------
+- Puede tomar sólo 2 valores: true y false.
+- Sus valores (true y false) son case-sensitive, así que NO podemos usar True y False como valores boolean.
+- Todos los valores pueden ser convertidos a boolean utilizando la función **Boolean()**
+
+| Tipo de dato 	| Valores convertidos a true 	| Valores convertidos a false 	|
+| :----------- 	| :------------------------- 	| :------------------------- 	|
+| Boolean 		| true    						| false 						|
+| String 		| Cualquier cadena NO vacía   	| "" (cadena vacía) 			|
+| Number 		| Cualquier valor NO cero 		| 0 o NaN 						|
+| Object 		| Cualquier objeto 				| null 							|
+| Undefined 	| n/a 							| undefined 					|
+
+
+
+
+
